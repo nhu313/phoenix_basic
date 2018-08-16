@@ -1,0 +1,23 @@
+<h2>Show Talk</h2>
+
+<ul>
+
+  <li>
+    <strong>Slug:</strong>
+    <%= @talk.slug %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @talk.title %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @talk.description %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: talk_path(@conn, :edit, @talk) %></span>
+<span><%= link "Back", to: talk_path(@conn, :index) %></span>
