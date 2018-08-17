@@ -7,8 +7,13 @@ body {
   background-color: #f0f2f2;
 }
 
+.section-white {
+  background-color: #FFF;
+}
+
 .header {
   background-color: #284c6e;
+  margin-bottom: 0;
 }
 
 .header a {
@@ -88,6 +93,7 @@ p {
 
 .card {
   border: 0;
+  border-radius: 5px;
 }
 
 .action {
@@ -125,6 +131,10 @@ hr {
   margin-top: 35px;
 }
 
+.talk {
+  margin-top: 20px;
+}
+
 .talk .subheader {
   margin-bottom: 14px;
 }
@@ -158,4 +168,19 @@ hr {
   text-transform: uppercase;
   font-size: 9px;
   font-weight: 400;
+}
+
+.dates .card {
+  margin: 3px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #284c6e;
+  border: 1px solid #284c6e;
+  text-align: center;
+  width: 60px;
+  padding: 0;
+}
+
+.dates .card-body {
+  padding: 3px;
 }

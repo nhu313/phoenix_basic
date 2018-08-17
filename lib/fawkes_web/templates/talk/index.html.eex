@@ -1,4 +1,20 @@
-<h2>Listing Talks</h2>
+<div class="talk-index">
+  <div class="d-flex justify-content-center dates">
+    <%= for {day_number, day_name} <- [{4, "Tue"}, {5, "Wed"}, {6, "Thu"}, {7, "Fri"}] do %>
+      <div class="card">
+        <div class="card-body">
+          <div class="dates__name smalltext"><%= day_name %></div>
+          <div class="dates__number"><%= day_number %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+
+  </div>
+
+</div>
 
 <table class="table">
   <thead>

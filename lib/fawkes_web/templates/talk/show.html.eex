@@ -1,4 +1,4 @@
-<div class="talk">
+<div class="container talk">
   <div class="card section">
     <p class="subtext"><%= format_date(@talk.slot.start) %> <%= format_time(@talk.slot.start) %> - <%= format_time(@talk.slot.finish) %></p>
     <h2><%= @talk.title %></h2>
