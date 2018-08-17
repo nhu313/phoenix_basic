@@ -1,23 +1,40 @@
-<h2>Show Talk</h2>
+<div class="talk">
+  <div class="card section">
+    <p class="subtext"><%= format_date(@talk.slot.start) %> <%= format_time(@talk.slot.start) %> - <%= format_time(@talk.slot.finish) %></p>
+    <h2><%= @talk.title %></h2>
+    <p class="subtext">Location: <%= @talk.location.name %></p>
+    <p class="icons">
 
-<ul>
+    </p>
+    <div class="add-to-schedule action">
+      <i class="far fa-calendar-check"></i>
+      ADD TO AGENDA
+    </div>
+  </div>
 
-  <li>
-    <strong>Slug:</strong>
-    <%= @talk.slug %>
-  </li>
+  <hr/>
+  <h4 class="subheader">Speakers/Trainers</h4>
+  <div class="card speaker">
+    <div class="row card-body">
+      <div class="col-sm-3">
+        <img src="https://elixirconf.com/2018/images/speakers/boyd-multerer.jpg" class="rounded-circle">
+      </div>
+      <div class="col-sm-8 speaker__info">
+        <h4><%= @talk.speaker.first <> " " <> @talk.speaker.last %></h4>
+        <div class="speaker__handle">
+          <i class="fab fa-github"></i> @<%= @talk.speaker.github %>
+        </div>
+        <div class="speaker__handle">
+          <i class="fab fa-twitter"></i> @<%= @talk.speaker.twitter %>
+        </div>
+      </div>
+      <div class="col-sm-1 speaker__link">
+        <a href="/speakers/<%= @talk.speaker.id%>"><i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @talk.title %>
-  </li>
-
-  <li>
-    <strong>Description:</strong>
-    <%= @talk.description %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: talk_path(@conn, :edit, @talk) %></span>
-<span><%= link "Back", to: talk_path(@conn, :index) %></span>
+  <hr />
+  <h4 class="subheader">About the event</h4>
+  <p><%= raw(@talk.description) %></p>
+</div>

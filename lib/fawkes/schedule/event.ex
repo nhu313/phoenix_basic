@@ -1,12 +1,16 @@
 defmodule Fawkes.Schedule.Event do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Fawkes.Repo.Symbol, as: SymbolType
+  alias Fawkes.Schedule.Slot
 
+  @type t :: %__MODULE__{}
 
   schema "events" do
     field :name, :string
-    field :slug, :string
-    field :slot_id, :id
+    field :slug, SymbolType
+
+    belongs_to :slot, Slot
 
     timestamps()
   end
@@ -14,8 +18,9 @@ defmodule Fawkes.Schedule.Event do
   @doc false
   def changeset(event, attrs) do
     event
-    |> cast(attrs, [:slug, :name])
-    |> validate_required([:slug, :name])
+    |> cast(attrs, [:slug, :name, :slot_id])
+    |> validate_required([:slug, :name, :slot_id])
     |> unique_constraint(:slug)
+    |> assoc_constraint(:slot)
   end
 end

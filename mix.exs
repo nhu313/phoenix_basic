@@ -40,7 +40,15 @@ defmodule Fawkes.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+
+      {:guardian, "~> 1.0"},
+      {:comeonin, "~> 4.0"},
+      {:bcrypt_elixir, "~> 1.0"},
+      {:timex, "~> 3.3"},
+      {:arc, "~> 0.10"},
+      {:arc_ecto, "~> 0.10"}
+
     ]
   end
 

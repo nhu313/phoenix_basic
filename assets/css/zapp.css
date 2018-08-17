@@ -1,12 +1,14 @@
 /* This file is for your main application css. */
 body {
   margin-top: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   font-size: 16px;
+  background-color: #f0f2f2;
 }
 
 .header {
   background-color: #284c6e;
+  font-weight: bold;
 }
 
 .header a {
@@ -21,6 +23,10 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+.header .fa-bars {
+  font-size: 24px;
 }
 
 hr {
@@ -45,16 +51,15 @@ p {
   margin-bottom: 20px;
 }
 
-.section-light-gray {
-  background-color: #f0f2f2;
-  padding: 30px;
+.card{
+  padding: 15px;
 }
 
 .venue img {
   width: 100%;
 }
 
-.venue .subheader {
+.subheader {
   font-weight: bold;
   text-transform: uppercase;
   font-size: inherit;
@@ -64,4 +69,58 @@ p {
   border: 1px solid #fff;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.subtext {
+  color: #999;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.talk h2 {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.card {
+  border: 0;
+}
+
+.action {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #284c6e;
+  vertical-align: middle;
+}
+
+.action .fa-calendar-check {
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+hr {
+  border-top: 1px solid #bbb;
+}
+
+.speaker img {
+  width: 100px;
+}
+
+.speaker__handle .fab {
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.speaker__handle {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.speaker__link {
+  margin-top: 35px;
+}
+
+.talk .subheader {
+  margin-bottom: 14px;
 }

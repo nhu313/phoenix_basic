@@ -7,7 +7,7 @@ defmodule Fawkes.Repo.Migrations.CreateTalks do
       add :title, :string
       add :description, :text
       add :slot_id, references(:schedule_slots, on_delete: :nothing)
-      add :speaker_id, references(:speakers, on_delete: :nothing)
+      add :speaker_id, references(:profiles, on_delete: :nothing, column: :id)
       add :category_id, references(:categories, on_delete: :nothing)
       add :audience_id, references(:audiences, on_delete: :nothing)
       add :location_id, references(:locations, on_delete: :nothing)

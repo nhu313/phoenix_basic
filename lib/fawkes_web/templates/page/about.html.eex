@@ -17,10 +17,8 @@
   </p>
 </div>
 
-
-
-<div class="section-light-gray venue">
-  <p>Hyatt Regency Bellevue, WA</p>
+<div class="section venue">
+  <h4 class="subheader">Hyatt Regency Bellevue, WA</h4>
   <img src="/images/hyatt.png">
   <h4 class="subheader">VENUE</h4>
   <p>The Hyatt Regency Bellevue is the largest of any Bellevue hotel on the Eastside of Seattle. It has a state-of-the-art StayFit™ Gym and Lap swimming pool, plus connecting sky bridges to access more than 250 shops, 45 restaurants and lounges, and exciting entertainment venues.</p>

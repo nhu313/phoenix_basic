@@ -1,12 +1,12 @@
-defmodule Fawkes.Repo.Migrations.CreateSpeakers do
+defmodule Fawkes.Repo.Migrations.CreateProfiles do
   use Ecto.Migration
 
   def change do
-    create table(:speakers) do
+    create table(:profiles) do
       add :slug, :string
       add :image, :string
       add :first, :string
-      add :last, :string
+      add :last, :citext
       add :company, :string
       add :github, :string
       add :twitter, :string
@@ -15,6 +15,6 @@ defmodule Fawkes.Repo.Migrations.CreateSpeakers do
       timestamps()
     end
 
-    create unique_index(:speakers, [:slug])
+    create unique_index(:profiles, [:slug])
   end
 end
