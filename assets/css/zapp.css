@@ -1,14 +1,14 @@
 /* This file is for your main application css. */
 body {
   margin-top: 0;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 16px;
   background-color: #f0f2f2;
 }
 
 .header {
   background-color: #284c6e;
-  font-weight: bold;
 }
 
 .header a {
@@ -71,6 +71,10 @@ p {
   margin-bottom: 20px;
 }
 
+.smalltext{
+  font-size: 12px;
+}
+
 .subtext {
   color: #999;
   font-size: 12px;
@@ -123,4 +127,35 @@ hr {
 
 .talk .subheader {
   margin-bottom: 14px;
+}
+
+.attendee img {
+  width: 70px;
+  border: 1px solid #4f235f;
+}
+
+.attendee .card {
+  margin: 5px;
+}
+
+.attendee {
+  text-align: center;
+}
+
+.attendee__check {
+  float: left;
+  position: absolute;
+  top: 76px;
+  left: 112px;
+  color: #4f235f;
+  font-size: 20px;
+}
+
+.talk__audience {
+  background-color: #4B285B;
+  color: #FFF;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 400;
 }
