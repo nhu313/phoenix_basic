@@ -23,7 +23,7 @@
         <img src="https://elixirconf.com/2018/images/speakers/boyd-multerer.jpg" class="rounded-circle">
       </div>
       <div class="col-sm-8 speaker__info">
-        <h4><%= @talk.speaker.first <> " " <> @talk.speaker.last %></h4>
+        <h4><%= full_name(@talk.speaker) %></h4>
         <div class="speaker__handle">
           <i class="fab fa-github"></i> @<%= @talk.speaker.github %>
         </div>

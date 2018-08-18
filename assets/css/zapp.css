@@ -7,8 +7,18 @@ body {
   background-color: #f0f2f2;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
 .section-white {
   background-color: #FFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header {
@@ -179,8 +189,60 @@ hr {
   text-align: center;
   width: 60px;
   padding: 0;
+  vertical-align: middle;
 }
 
 .dates .card-body {
   padding: 3px;
+}
+
+.dates .fas {
+  color: #284c6e;
+  font-size: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.talk-index__tab {
+  margin-top: 20px;
+}
+
+.talk-tab__link {
+  padding-left: 17px;
+  padding-right: 19px;
+  border-bottom: 4px solid #FFF;
+  text-decoration: none;
+  margin-right: 3px;
+}
+
+.talk-tab__link:hover, .talk-tab__link:focus, .talk-tab__link-active {
+  border-bottom: 4px solid #284c6e;
+  color: #284c6e;
+}
+
+.talk-index {
+  padding-bottom: 0;
+}
+
+.schedule .card {
+  margin: 15px;
+}
+
+.schedule a {
+  color: #444;
+}
+.schedule__talk-title {
+  font-weight: 300;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.schedule__details {
+  margin-bottom: 7px;
+  font-size: 12px;
+}
+
+.schedule__talk-link {
+  font-size: 30px;
+  color: #284c6e;
 }
