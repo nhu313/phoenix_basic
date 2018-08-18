@@ -9,6 +9,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #284c6e;
 }
 
 a:hover, a:focus {
@@ -155,7 +156,17 @@ hr {
 }
 
 .attendee .card {
-  margin: 5px;
+    background-color: #f0f2f2;
+    padding: 5px;
+}
+
+.attendee .card-body {
+  background-color: #FFF;
+  border-radius: 5px;
+}
+
+.attendee-wrapper {
+  padding: 5px;
 }
 
 .attendee {
@@ -245,4 +256,24 @@ hr {
 .schedule__talk-link {
   font-size: 30px;
   color: #284c6e;
+}
+
+.speaker-details > .details{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.speaker-details__pic {
+  width: 110px;
+  border: 1px solid #284c6e;
+  position: absolute;
+  top: -60px;
+  left: 42%;
+  text-align: center;
+}
+
+.speaker-details .speaker__info h4 {
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 300;
 }

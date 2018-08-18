@@ -34,7 +34,9 @@ defmodule Fawkes.Schedule do
 
   """
   def list_speakers do
-    Repo.all(Speaker)
+    Speaker
+    |> preload(:talk)
+    |> Repo.all()
   end
 
   @doc """
@@ -51,7 +53,11 @@ defmodule Fawkes.Schedule do
       ** (Ecto.NoResultsError)
 
   """
-  def get_speaker!(id), do: Repo.get!(Speaker, id)
+  def get_speaker!(id) do
+    Speaker
+    |> preload(talk: [:slot, :category, :audience, :location])
+    |> Repo.get!(id)
+  end
 
   @doc """
   Creates a speaker.

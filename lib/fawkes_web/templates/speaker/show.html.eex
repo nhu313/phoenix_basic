@@ -1,3 +1,48 @@
+<div class="container speaker-details">
+  <div class="card details">
+    <div class="card-body">
+      <img src="https://elixirconf.com/2018/images/speakers/anna-neyzberg.jpg" class="rounded-circle speaker-details__pic">
+      <div class="clearfix"></div>
+      <div class="speaker__info">
+        <h4><%= FawkesWeb.TalkView.full_name(@speaker) %></h4>
+        <div class="speaker__handle">
+          <i class="fab fa-github"></i> @<%= @speaker.github %>
+        </div>
+        <div class="speaker__handle">
+          <i class="fab fa-twitter"></i> @<%= @speaker.twitter %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <h4 class="subheader">About</h4>
+  <p><%= @speaker.description %></p>
+
+  <hr />
+  <h4 class="subheader">Talk</h4>
+  <div class="card">
+    <div class="card-body">
+      <a href="/talks/<%= @speaker.talk.id %>" class="float-right schedule__talk-link"><i class="fas fa-angle-right"></i></a>
+      <p class="subtext"><%= FawkesWeb.TalkView.format_date(@speaker.talk.slot.start) %> <%= FawkesWeb.TalkView.format_time(@speaker.talk.slot.start) %> - <%= FawkesWeb.TalkView.format_time(@speaker.talk.slot.finish) %></p>
+      <a href="/talks/<%= @speaker.talk.id %>"><h3 class="schedule__talk-title"><%= @speaker.talk.title %></h3></a>
+      <div class="schedule__details"><%= FawkesWeb.TalkView.full_name(@speaker) %> &nbsp; | &nbsp; <%= @speaker.talk.location.name %></div>
+      <p class="icons">
+        <button class="btn talk__audience"><%= @speaker.talk.audience.name %></button>
+        <%= for _ <- (1..5) do %>
+          <img src="/images/icons/Ecto.svg">
+        <% end %>
+      </p>
+      <div class="add-to-schedule action">
+        <i class="far fa-calendar-check"></i>
+        ADD TO AGENDA
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
 <h2>Show Speaker</h2>
 
 <ul>
@@ -7,10 +52,6 @@
     <%= @speaker.slug %>
   </li>
 
-  <li>
-    <strong>Image:</strong>
-    <%= @speaker.image %>
-  </li>
 
   <li>
     <strong>First:</strong>
